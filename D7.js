@@ -268,7 +268,8 @@ console.log(specFilm("tt0077869"));
 function filmSum (){
   let sum = 0
   for (let i = 0; i < movies.length; i++) {
-    sum =+ movies[i].Year
+    let movv = movies[i].Year
+    sum += parseInt(movv)
    }
    return sum
 }
