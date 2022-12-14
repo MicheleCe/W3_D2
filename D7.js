@@ -87,11 +87,9 @@ console.log(stringz(["EPICODE", "is", "great"]));
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
 
-function numberz (rest){
-  let odds = rest.filter(n => n%2)
-  return odds
- }
- console.log(numberz (Array.from(Array(100).keys())));
+const odds = (rest) => rest.filter(n => n%2)
+
+ console.log(odds(Array.from(Array(100).keys())));
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
@@ -221,10 +219,9 @@ console.log(oldFilm(movies));
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
 
-function nFilm (){
-  return movies.length
-}
-console.log(nFilm(movies));
+const lunghezza = () => movies.length
+
+console.log(lunghezza(movies));
 
 /* ESERCIZIO 12
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
