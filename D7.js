@@ -217,7 +217,7 @@ const movies = [
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
 
-const lunghezza = () => movies.length
+const lunghezza = (obj) => obj.length
 console.log("ESERCIZIO 11_", lunghezza(movies));
 
 /* ESERCIZIO 12
