@@ -52,6 +52,7 @@ console.log(summ([23,30, 65, 12, 34]));
 /* ESERCIZIO 5
   Scrivi una funzione per sommare i numeri contenuti in un array (usare REDUCE)
 */
+
 function summ1 (rest){
   let sum = 0;
   let  result = rest.reduce((accumulator, currentValue) => accumulator + currentValue, sum);
@@ -63,7 +64,9 @@ console.log(summ1([23,30, 65, 12, 34]));
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
 
-
+const numbers3 = [23, 54, 656, 76]
+const numbersz = numbers3.map((num) => num + 4)
+console.log(numbersz);
 
 /* ESERCIZIO 8
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
@@ -203,14 +206,8 @@ const movies = [
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
 
-function oldFilm (){
-  for (let i = 0; i < movies.length; i++) {
-    const element = movies[i].Year;
-    const min = Math.min(element)
-    return min
-  }
-}
-console.log(oldFilm(movies));
+ const years = movies.map((x)=> parseInt(x.Year));
+ console.log(Math.min(...years));
 
 /* ESERCIZIO 11
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
@@ -245,7 +242,7 @@ function oldFilm (){
   }
   return latestMill
 }
-console.log(oldFilm(movies));
+console.log("ESERCIZIO 13", oldFilm(movies));
 
 /* ESERCIZIO 14
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
@@ -256,7 +253,7 @@ function specFilm (imb){
     if (movies[i].imdbID === imb){return movies[i]}
   }
 }
-console.log(specFilm("tt0077869"));
+console.log("ESERCIZIO 14", specFilm("tt0077869"));
 
 /* ESERCIZIO 15
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
