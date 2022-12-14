@@ -214,7 +214,6 @@ const movies = [
 */
 
 const lunghezza = () => movies.length
-
 console.log(lunghezza(movies));
 
 /* ESERCIZIO 12
