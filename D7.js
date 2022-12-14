@@ -10,7 +10,7 @@ function esercizio1 (string1, string2) {
  upperCase.push(first + last);
  return upperCase
 };
-console.log(esercizio1("aiuto mamma", " non so cosa sto facendo"));
+console.log("ESERCIZIO 1", esercizio1("aiuto mamma", " non so cosa sto facendo"));
 
 
 /* ESERCIZIO 2
@@ -25,7 +25,7 @@ function numbers () {
     }
   return randomArray
 }
-console.log(numbers())
+console.log("ESERCIZIO 2", numbers())
 
 /* ESERCIZIO 3
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici (suggerimento: il metodo filter può aiutare)
@@ -34,7 +34,7 @@ console.log(numbers())
 function numbers1 (rest){
  return rest.filter((x) => x% 2 === 0);
 }
-console.log(numbers1([23,30, 65, 12, 34]));
+console.log("ESERCIZIO 3", numbers1([23,30, 65, 12, 34]));
 
 /* ESERCIZIO 4
   Scrivi una funzione per sommare i numeri contenuti in un array
@@ -47,7 +47,7 @@ function summ(rest) {
       }
   return sum
 }
-console.log(summ([23,30, 65, 12, 34]));
+console.log("ESERCIZIO 4", summ([23,30, 65, 12, 34]));
 
 /* ESERCIZIO 5
   Scrivi una funzione per sommare i numeri contenuti in un array (usare REDUCE)
@@ -58,7 +58,7 @@ function summ1 (rest){
   let  result = rest.reduce((accumulator, currentValue) => accumulator + currentValue, sum);
   return result
 }
-console.log(summ1([23,30, 65, 12, 34]));
+console.log("ESERCIZIO 5", summ1([23,30, 65, 12, 34]));
 
 /* ESERCIZIO 6
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
@@ -66,7 +66,7 @@ console.log(summ1([23,30, 65, 12, 34]));
 
 const numbers3 = [23, 54, 656, 76]
 const numbersz = numbers3.map((num) => num + 4)
-console.log(numbersz);
+console.log("ESERCIZIO 6", numbersz);
 
 /* ESERCIZIO 8
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
@@ -80,7 +80,7 @@ function stringz (rest){
   }
   return wordLen
 }
-console.log(stringz(["EPICODE", "is", "great"]));
+console.log("ESERCIZIO 8", stringz(["EPICODE", "is", "great"]));
 
 
 /* ESERCIZIO 9
@@ -89,7 +89,7 @@ console.log(stringz(["EPICODE", "is", "great"]));
 
 const odds = (rest) => rest.filter(n => n%2)
 
- console.log(odds(Array.from(Array(100).keys())));
+ console.log("ESERCIZIO 9", odds(Array.from(Array(100).keys())));
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
@@ -207,14 +207,18 @@ const movies = [
 */
 
  const years = movies.map((x)=> parseInt(x.Year));
- console.log(Math.min(...years));
+ console.log("ESERCIZIO 10_", Math.min(...years));
+
+ const years2 = movies.map((x)=> x.Year);
+ const orderedYears = years2.sort();
+ console.log("ESERCIZIO 10.1__________", orderedYears[0]);
 
 /* ESERCIZIO 11
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
 
 const lunghezza = () => movies.length
-console.log(lunghezza(movies));
+console.log("ESERCIZIO 11_", lunghezza(movies));
 
 /* ESERCIZIO 12
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
@@ -226,7 +230,7 @@ function nameFilm (){
   }
   return filmNames
 }
-console.log(nameFilm(movies));
+console.log("ESERCIZIO 12", nameFilm(movies));
 
 /* ESERCIZIO 13
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
@@ -266,4 +270,4 @@ function filmSum (){
    }
    return sum
 }
-console.log(filmSum(movies));
+console.log("ESERCIZIO 15", filmSum(movies));
