@@ -223,10 +223,10 @@ console.log("ESERCIZIO 11_", lunghezza(movies));
 /* ESERCIZIO 12
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
-function nameFilm (){
+function nameFilm (obj){
   let filmNames = []
-  for (let i = 0; i < movies.length; i++) {
-    filmNames.push(movies[i].Title)
+  for (let i = 0; i < obj.length; i++) {
+    filmNames.push(obj[i].Title)
   }
   return filmNames
 }
@@ -236,11 +236,11 @@ console.log("ESERCIZIO 12", nameFilm(movies));
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
 
-function oldFilm (){
+function oldFilm (obj){
   let latestMill = []
-  for (let i = 0; i < movies.length; i++) {
-    if (movies[i].Year > 2000) {
-      latestMill.push(movies[i])
+  for (let i = 0; i < obj.length; i++) {
+    if (obj[i].Year > 2000) {
+      latestMill.push(obj[i])
     }
   }
   return latestMill
@@ -262,10 +262,10 @@ console.log("ESERCIZIO 14", specFilm("tt0077869"));
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
 
-function filmSum (){
+function filmSum (obj){
   let sum = 0
-  for (let i = 0; i < movies.length; i++) {
-    let movv = movies[i].Year
+  for (let i = 0; i < obj.length; i++) {
+    let movv = obj[i].Year
     sum += parseInt(movv)
    }
    return sum
