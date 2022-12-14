@@ -27,8 +27,6 @@ function numbers () {
 }
 console.log(numbers())
 
-
-
 /* ESERCIZIO 3
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici (suggerimento: il metodo filter può aiutare)
 */
@@ -37,6 +35,7 @@ function numbers1 (rest){
  return rest.filter((x) => x% 2 === 0);
 }
 console.log(numbers1([23,30, 65, 12, 34]));
+
 /* ESERCIZIO 4
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
@@ -50,11 +49,9 @@ function summ(rest) {
 }
 console.log(summ([23,30, 65, 12, 34]));
 
-
 /* ESERCIZIO 5
   Scrivi una funzione per sommare i numeri contenuti in un array (usare REDUCE)
 */
-
 function summ1 (rest){
   let sum = 0;
   let  result = rest.reduce((accumulator, currentValue) => accumulator + currentValue, sum);
